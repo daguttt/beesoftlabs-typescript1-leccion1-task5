@@ -75,7 +75,7 @@ Se cuenta también con los datos de los distribuidores, entre ellos: nombre, tel
 interface Distributor {
   name: string;
   phone: string;
-  products: Product[];
+  offeredProducts: Product[];
 }
 
 interface Product {
