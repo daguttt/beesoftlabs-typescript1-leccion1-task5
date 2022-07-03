@@ -1,7 +1,7 @@
 interface Distributor {
   name: string;
   phone: string;
-  products: Product[];
+  offeredProducts: Product[];
 }
 
 interface Product {
