@@ -13,10 +13,10 @@ enum TaskState {
 }
 
 interface Task {
-  state: TaskState;
+  name: string;
   startingDate: Date;
-  endingDate: Date;
   description: string;
+  state: TaskState;
 }
 
 interface PendingTask extends Task {
