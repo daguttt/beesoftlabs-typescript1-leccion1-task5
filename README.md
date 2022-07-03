@@ -26,6 +26,7 @@ interface CanceledTask extends Task {
   state: "canceled";
 }
 
+const totalTasks: Task[] = [];
 const pendingTaskList: PendingTask[] = [];
 const canceledTaskList: CanceledTask[] = [];
 const finishedTaskList: FinishedTask[] = [];
