@@ -1,4 +1,4 @@
-enum TaskState {
+enum TaskStatus {
   Pending = "pending",
   OnProgress = "on progress",
   Canceled = "canceled",
@@ -9,23 +9,23 @@ interface Task {
   name: string;
   startingDate: Date;
   description: string;
-  state: TaskState;
+  status: TaskStatus;
 }
 
 interface PendingTask extends Task {
-  state: TaskState.Pending;
+  state: TaskStatus.Pending;
 }
 
 interface OnProgressTask extends Task {
-  state: TaskState.OnProgress;
+  state: TaskStatus.OnProgress;
 }
 
 interface FinishedTask extends Task {
-  state: TaskState.Finished;
+  state: TaskStatus.Finished;
 }
 
 interface CanceledTask extends Task {
-  state: TaskState.Canceled;
+  state: TaskStatus.Canceled;
 }
 
 const pendingTaskList: PendingTask[] = [];

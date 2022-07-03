@@ -5,7 +5,7 @@
 Para un sistema de gestión de tareas, deseamos registrar todas las tareas, cada tarea tiene asociada la siguiente información: nombre, fecha de inicio, descripción y estatus, el estatus debe ser uno de los siguientes: pendiente, en proceso, terminada, cancelada. Además, se requiere una lista con todas las tareas pendientes, las tareas terminadas y las canceladas.
 
 ```ts
-enum TaskState {
+enum TaskStatus {
   Pending = "pending",
   OnProgress = "on progress",
   Canceled = "canceled",
@@ -16,23 +16,23 @@ interface Task {
   name: string;
   startingDate: Date;
   description: string;
-  state: TaskState;
+  status: TaskStatus;
 }
 
 interface PendingTask extends Task {
-  state: TaskState.Pending;
+  state: TaskStatus.Pending;
 }
 
 interface OnProgressTask extends Task {
-  state: TaskState.OnProgress;
+  state: TaskStatus.OnProgress;
 }
 
 interface FinishedTask extends Task {
-  state: TaskState.Finished;
+  state: TaskStatus.Finished;
 }
 
 interface CanceledTask extends Task {
-  state: TaskState.Canceled;
+  state: TaskStatus.Canceled;
 }
 
 const pendingTaskList: PendingTask[] = [];
