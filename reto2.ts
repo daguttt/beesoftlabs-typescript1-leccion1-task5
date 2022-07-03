@@ -3,13 +3,15 @@ interface Event {
   name: string;
   price: number;
   date: Date;
-  capacity: number
+  capacity: number;
 }
 interface Participant {
   name: string;
   phone: string;
   email: string;
+  attendedEventList: Event[];
+  eventsToAttend: Event[];
 }
 
-const participantList: Participant[] = []
-const eventsHistory: Event[] = []
+const participantList: Participant[] = [];
+const eventsHistory: Event[] = [];

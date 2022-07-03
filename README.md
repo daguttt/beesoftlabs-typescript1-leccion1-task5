@@ -57,6 +57,8 @@ interface Participant {
   name: string;
   phone: string;
   email: string;
+  attendedEventList: Event[];
+  eventsToAttend: Event[];
 }
 
 const participantList: Participant[] = [];
